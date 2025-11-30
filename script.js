@@ -8,7 +8,7 @@ bands.sort((a, b) => {
 });
 
 // DOM Manipulation
-const list = document.getElementById('band');
+const list = document.getElementById('bands');
 bands.forEach(band => {
     const li = document.createElement('li');
     li.textContent = band;
