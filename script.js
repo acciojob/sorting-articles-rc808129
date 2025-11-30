@@ -1,21 +1,35 @@
-const bands = [
-    'The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil',
-    'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State',
-    'We Came as Romans', 'Counterparts', 'Oh, Sleeper',
-    'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'
-];
+document.addEventListener("DOMContentLoaded", () => {
 
-bands.sort((a, b) => {
-    const titleA = a.replace(/^(a |an |the )/i, '').trim().toLowerCase();
-    const titleB = b.replace(/^(a |an |the )/i, '').trim().toLowerCase();
-    return titleA.localeCompare(titleB);
-});
+    const bands = [
+        'The Plot in You',
+        'The Devil Wears Prada',
+        'Pierce the Veil',
+        'Norma Jean',
+        'The Bled',
+        'Say Anything',
+        'The Midway State',
+        'We Came as Romans',
+        'Counterparts',
+        'Oh, Sleeper',
+        'A Skylit Drive',
+        'Anywhere But Here',
+        'An Old Dog'
+    ];
 
-// FIXED → Cypress wants plain <ul>
-const list = document.querySelector("ul");
+    // Sorting
+    bands.sort((a, b) => {
+        const titleA = a.replace(/^(a |an |the )/i, '').trim().toLowerCase();
+        const titleB = b.replace(/^(a |an |the )/i, '').trim().toLowerCase();
+        return titleA.localeCompare(titleB);
+    });
 
-bands.forEach(band => {
-    const li = document.createElement("li");
-    li.textContent = band;
-    list.appendChild(li);
+    // DOM manipulation
+    const list = document.getElementById('bands');
+
+    bands.forEach(band => {
+        const li = document.createElement('li');
+        li.textContent = band;
+        list.appendChild(li);
+    });
+
 });
