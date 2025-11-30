@@ -11,10 +11,11 @@ bands.sort((a, b) => {
     return titleA.localeCompare(titleB);
 });
 
-const list = document.getElementById('bands');
+// FIXED → Cypress wants plain <ul>
+const list = document.querySelector("ul");
 
 bands.forEach(band => {
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.textContent = band;
     list.appendChild(li);
 });
