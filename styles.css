@@ -1,1 +1,28 @@
 /*  your css code here. If applicable */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+#band {
+	background-color: gray;
+	width: 60vw;
+	list-style-position: inside;
+	
+	
+	
+}
+li {
+	
+	margin: 25px;
+	font-size: 20px;
+	list-style-type: square;
+	
+}
